@@ -153,6 +153,7 @@
 		"mkdirp": "0.5.1",
 		"node-sass": "4.12.0",
 		"node-watch": "0.6.0",
+		"patch-package": "6.2.2",
 		"postcss": "7.0.13",
 		"postcss-loader": "3.0.0",
 		"prettier": "npm:wp-prettier@1.19.1",
@@ -180,6 +181,7 @@
 		"worker-farm": "1.7.0"
 	},
 	"scripts": {
+		"postinstall": "patch-package",
 		"prebuild": "npm run check-engines",
 		"clean:packages": "rimraf ./packages/*/build ./packages/*/build-module ./packages/*/build-style ./packages/*/node_modules",
 		"prebuild:packages": "npm run clean:packages && lerna run build",
